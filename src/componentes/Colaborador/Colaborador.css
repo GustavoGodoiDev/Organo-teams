@@ -1,7 +1,9 @@
 /* Colaborador */
 .colaborador {
-    width: 240px; /* Tornar o cartão menor */
-    margin: 0 auto; /* Centraliza o colaborador */
+    width: calc(20% + 120px); /* Escala proporcionalmente em relação ao tamanho da tela */
+    max-width: 280px; /* Define um tamanho máximo */
+    min-width: 180px; /* Define um tamanho mínimo */
+    margin: 0 auto; 
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza os itens dentro do colaborador */
@@ -10,20 +12,22 @@
 
 /* Cabeçalho do colaborador */
 .colaborador .cabecalho {
-    background-color:  #F0F0F0;
+    background-color: #F0F0F0;
     border-radius: 10px 10px 0px 0px;
-    width: 80%; /* Ajusta a largura para se alinhar com o colaborador */
-    padding: 16px;
-    text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
+    width: 100%; /* Proporcional ao tamanho do cartão */
+    padding: 0.05rem; /* Unidades relativas para o padding */
+    text-align: center; 
 }
 
 /* Imagem do colaborador */
 .colaborador img {
-    width: 80px; /* Reduz o tamanho da foto */
-    height: 80px; /* Garantir que a altura seja igual à largura para ser redonda */
-    border-radius: 50%; /* Garante que a imagem fique redonda */
+    width: 8.5rem; /* Escala em relação ao cartão */
+    max-width: 120px; /* Define um tamanho máximo */
+    min-width: 60px; 
+    height: auto; 
+    border-radius: 50%; 
     position: relative;
-    bottom: -40px;
+    bottom: -40px; /* Ajusta a posição da imagem */
     margin: 0 auto; /* Centraliza a imagem */
 }
 
@@ -32,79 +36,58 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding: 1rem 1rem; 
     margin-bottom: 10px;
-    width: 100%; /* Ajusta a largura do rodapé para se alinhar com o colaborador */
+    width: 90%; 
     text-align: center; /* Centraliza o conteúdo do rodapé */
 }
 
 /* Estilos para os textos do rodapé */
 .colaborador .rodape h4 {
     color: #6278F7;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1rem; /* Fonte responsiva */
+    line-height: 1.5rem;
     font-weight: bold;
     margin-bottom: 8px;
+    margin-top: 40px;
 }
 
 .colaborador .rodape h5 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 0.9rem; /* Fonte um pouco menor */
+    line-height: 1.2rem;
     color: #212121;
-    padding: 0 16px;
+    padding: 0 1rem;
 }
 
-/* Responsividade */
+/* Responsividade ajustada */
 @media (max-width: 768px) {
-    .colaborador .cabecalho {
-        width: 85%;
-        padding: 10px;
-    }
-
     .colaborador {
-        width: 200px; /* Cartões ainda menores em telas menores */
+        width: calc(25% + 100px); /* Ajusta proporcionalmente */
     }
 
     .colaborador img {
-        width: 100px; /* Ajusta o tamanho da imagem */
-        height: 100px; /* Garante que a imagem seja redonda */
-        bottom: -30px; /* Ajusta a posição da imagem */
+        width: 8.5rem; /* Proporcionalmente menor */
     }
 
     .colaborador .rodape {
-        padding-top: 15px;
-    }
-
-    .colaborador .rodape h4 {
-        font-size: 16px;
-    }
-
-    .colaborador .rodape h5 {
-        font-size: 14px;
+        padding: 1.5rem 0.8rem; /* Reduz o espaçamento */
     }
 }
 
 @media (max-width: 480px) {
     .colaborador {
-        width: 180px; /* Tornando os cartões ainda menores em telas muito pequenas */
+        width: calc(30% + 80px); /* Ajusta ainda mais em telas pequenas */
     }
 
     .colaborador img {
-        width: 80px; /* Ajusta ainda mais o tamanho da imagem */
-        height: 80px; /* Garante que a imagem ainda seja redonda */
-        bottom: -20px;
+        width: 8.5rem;
     }
 
     .colaborador .rodape {
-        padding-top: 10px;
+        padding: 1rem 0.6rem; /* Espaçamento mais compacto */
     }
 
-    .colaborador .rodape h4 {
-        font-size: 14px;
-    }
-
-    .colaborador .rodape h5 {
-        font-size: 12px;
+    .colaborador .rodape h4, .colaborador .rodape h5 {
+        font-size: 0.8rem; /* Fontes menores */
     }
 }
