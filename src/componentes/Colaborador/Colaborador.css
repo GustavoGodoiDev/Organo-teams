@@ -1,6 +1,6 @@
 /* Colaborador */
 .colaborador {
-    width: 280px;
+    width: 240px; /* Tornar o cartão menor */
     margin: 0 auto; /* Centraliza o colaborador */
     display: flex;
     flex-direction: column;
@@ -12,17 +12,18 @@
 .colaborador .cabecalho {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
-    width: 88%; /* Ajusta a largura para se alinhar com o colaborador */
+    width: 80%; /* Ajusta a largura para se alinhar com o colaborador */
     padding: 16px;
     text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
 }
 
 /* Imagem do colaborador */
 .colaborador img {
-    width: 100px;
-    border-radius: 50%;
+    width: 80px; /* Reduz o tamanho da foto */
+    height: 80px; /* Garantir que a altura seja igual à largura para ser redonda */
+    border-radius: 50%; /* Garante que a imagem fique redonda */
     position: relative;
-    bottom: -50px;
+    bottom: -40px;
     margin: 0 auto; /* Centraliza a imagem */
 }
 
@@ -56,22 +57,22 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-
     .colaborador .cabecalho {
         width: 85%;
     }
 
     .colaborador {
-        width: 220px;
+        width: 200px; /* Cartões ainda menores em telas menores */
     }
 
     .colaborador img {
-        width: 120px;
-        bottom: -20px;
+        width: 100px; /* Ajusta o tamanho da imagem */
+        height: 100px; /* Garante que a imagem seja redonda */
+        bottom: -30px; /* Ajusta a posição da imagem */
     }
 
     .colaborador .rodape {
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
     .colaborador .rodape h4 {
@@ -85,23 +86,24 @@
 
 @media (max-width: 480px) {
     .colaborador {
-        width: 220px;
+        width: 180px; /* Tornando os cartões ainda menores em telas muito pequenas */
     }
 
     .colaborador img {
-        width: 120px;
+        width: 80px; /* Ajusta ainda mais o tamanho da imagem */
+        height: 80px; /* Garante que a imagem ainda seja redonda */
         bottom: -20px;
     }
 
     .colaborador .rodape {
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .colaborador .rodape h4 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .colaborador .rodape h5 {
-        font-size: 14px;
+        font-size: 12px;
     }
 }

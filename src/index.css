@@ -1,7 +1,7 @@
 /* Defina um layout básico para telas grandes, como desktops */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,10 @@ body {
       font-size: 16px;  /* Ajuste a fonte para dispositivos menores */
   }
 
+  .banner{
+    margin-bottom: 15px;
+  }
+
   .container {
       width: 95%; /* Use uma largura maior para telas pequenas */
   }
@@ -34,12 +38,18 @@ body {
 
   .formulario {
       padding: 20px;
+      margin-top: 10px;  /* Diminua o espaço acima do formulário */
   }
 }
 
 /* Media query para telas de tablets (a partir de 768px) */
 @media (max-width: 1024px) {
   /* Ajustes para telas de tablets */
+
+  .banner{
+    margin-bottom: 15px;
+  }
+  
   .container {
       width: 90%;
   }

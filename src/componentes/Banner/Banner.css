@@ -5,6 +5,7 @@
     padding: 20px; /* Adiciona um pouco de padding ao redor do conteúdo */
     width: 100%; /* Garante que o banner ocupe toda a largura disponível */
     min-height: 200px; /* Altura mínima para o banner */
+    margin-bottom: 15px;
 }
 
 /* Estilo para a imagem */
