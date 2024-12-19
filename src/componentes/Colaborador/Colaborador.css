@@ -6,6 +6,7 @@
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
+
 .colaborador img {
     width: 100px;
     border-radius: 50%;
@@ -19,6 +20,7 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
     padding-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .colaborador .rodape h4 {
@@ -34,4 +36,50 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+    .colaborador {
+        width: 220px;
+    }
+
+    .colaborador img {
+        width: 80px;
+        bottom: -40px;
+    }
+
+    .colaborador .rodape {
+        padding-top: 80px;
+    }
+
+    .colaborador .rodape h4 {
+        font-size: 16px;
+    }
+
+    .colaborador .rodape h5 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .colaborador {
+        width: 180px;
+    }
+
+    .colaborador img {
+        width: 60px;
+        bottom: -30px;
+    }
+
+    .colaborador .rodape {
+        padding-top: 70px;
+    }
+
+    .colaborador .rodape h4 {
+        font-size: 14px;
+    }
+
+    .colaborador .rodape h5 {
+        font-size: 14px;
+    }
 }

@@ -1,3 +1,4 @@
+/* Estilo base do botão */
 .botao {
     background-color: #6278f7;
     border-radius: 10px;
@@ -9,11 +10,30 @@
     color: #FFF;
     margin: 32px 0;
     transition: all ease 0.3s;
-    box-shadow: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
+/* Efeito de hover */
 .botao:hover {
     background-color: #000000;
     color: #ffffff;
     scale: 1.05;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .botao {
+        width: 100%; 
+        font-size: 18px; 
+        padding: 20px;
+        margin: 20px 0; 
+    }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .botao {
+        font-size: 16px; 
+        padding: 15px; 
+    }
 }

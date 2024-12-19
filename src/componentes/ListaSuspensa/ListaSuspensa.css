@@ -1,5 +1,4 @@
-/* CSS DESATIVADO */
-
+/* Lista Suspensa Responsiva */
 div.lista-suspensa select {
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
@@ -14,4 +13,25 @@ div.lista-suspensa select {
 
 div.lista-suspensa select:hover {
     scale: 1.03;
+}
+
+@media (max-width: 1024px) {
+    div.lista-suspensa select {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    div.lista-suspensa select {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    div.lista-suspensa select {
+        padding: 10px;
+        font-size: 12px;
+    }
 }
