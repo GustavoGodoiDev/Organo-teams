@@ -59,6 +59,7 @@
 @media (max-width: 768px) {
     .colaborador .cabecalho {
         width: 85%;
+        padding: 10px;
     }
 
     .colaborador {
