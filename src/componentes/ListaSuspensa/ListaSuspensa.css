@@ -1,0 +1,17 @@
+/* CSS DESATIVADO */
+
+div.lista-suspensa select {
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: all ease 0.3s;
+}
+
+div.lista-suspensa select:hover {
+    scale: 1.03;
+}

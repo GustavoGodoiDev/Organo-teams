@@ -1,18 +1,8 @@
 .banner {
-    background-color: #6278f7;
-    width: 100%; /* O banner ocupará toda a largura disponível */
-    height: 400px; /* Defina a altura do banner */
-    overflow: hidden; /* Esconde partes da imagem fora do banner */
-    position: relative; /* Para posicionamento absoluto da imagem */
+    background-color: #6278F7;
+    text-align: center;
 }
 
 .banner img {
-    width: 100%; /* Faz a imagem ocupar toda a largura */
-    height: 100%; /* Faz a imagem ocupar toda a altura */
-    max-width: fit-content;
-    object-fit: cover; /* Faz a imagem preencher o banner sem distorcer */
-    position: absolute; /* Posiciona a imagem relativa ao banner */
-    top: 50%; /* Move a imagem para o centro vertical */
-    left: 50%; /* Move a imagem para o centro horizontal */
-    transform: translate(-50%, -50%); /* Centraliza a imagem completamente */
+    max-width: 100%;
 }

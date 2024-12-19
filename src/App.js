@@ -1,69 +1,113 @@
 import { useState } from 'react';
-import Banner from './componentes/Banner/Banner.js';
-import Forms from './componentes/Forms/Forms.js';
-import Team from './componentes/Team/Team';
+import Banner from './componentes/Banner';
+import Formulario from './componentes/Formulario';
+import Time from './componentes/Time';
 
 function App() {
-  const teams = [
-    {
-      nome: 'Programação',
-      corPrimaria: '#57c278',
-      corSecundaria: '#d9f7e9'
-    },
-    {
-      nome: 'Mobile',
-      corPrimaria: '#82CFFA',
-      corSecundaria: '#E8F8FF'
-    },
-    {
-      nome: 'Front-End',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F8E2'
-    },
-    {
-      nome: 'Data-Science',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8'
-    },
-    {
-      nome: 'DevOps',
-      corPrimaria: '#DB6EBF',
-      corSecundaria: '#FAE9F5'
-    },
-    {
-      nome: 'UX UI',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9'
-    },
-    {
-      nome: 'Inovação e Gestão',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF'
-    }
-  ];
+    const times = [
+        {
+            nome: 'Diretoria',
+            corPrimaria: '#1ABC9C',
+            corSecundaria: '#D4F4F1'
+        },
+        {
+            nome: 'Recursos humanos',
+            corPrimaria: '#82CFFA',
+            corSecundaria: '#E8F8FF'
+        },
+        {
+            nome: 'Financeiro',
+            corPrimaria: '#27AE60',
+            corSecundaria: '#D5F5E3'
+        },
+        {
+            nome: 'Contábil',
+            corPrimaria: '#E06B69',
+            corSecundaria: '#FDE7E8'
+        },
+        {
+            nome: 'Tecnologia da informação',
+            corPrimaria: '#1E90FF',
+            corSecundaria: '#D6EAF8'
+        },
+        {
+            nome: 'Supply Chain',
+            corPrimaria: '#8E44AD',
+            corSecundaria: '#F5EEF8'
+        },
+        {
+            nome: 'Logística',
+            corPrimaria: '#FFBA05',
+            corSecundaria: '#FFF5D9'
+        },
+        {
+            nome: 'Engenharia',
+            corPrimaria: '#7D3C98',
+            corSecundaria: '#EBDEF0'
+        },
+        {
+            nome: 'Projetos',
+            corPrimaria: '#2980B9',
+            corSecundaria: '#D6EAF8'
+        },
+        {
+            nome: 'Facilities',
+            corPrimaria: '#16A085',
+            corSecundaria: '#D1F2EB'
+        },
+        {
+            nome: 'Produção',
+            corPrimaria: '#C0392B',
+            corSecundaria: '#F9EBEA'
+        },
+        {
+            nome: 'Vendas',
+            corPrimaria: '#E67E22',
+            corSecundaria: '#FDE3A7'
+        },
+        {
+            nome: 'Time de campo',
+            corPrimaria: '#E74C3C',
+            corSecundaria: '#FADBD8'
+        }
+    ];
 
-  const [colaboradores, setColaboradores] = useState([]);
+    // Estado para armazenar colaboradores organizados por time
+    const [colaboradores, setColaboradores] = useState(() => {
+        const initialColaboradores = {};
+        times.forEach(time => {
+            initialColaboradores[time.nome] = [];
+        });
+        return initialColaboradores;
+    });
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
-    setColaboradores([...colaboradores, colaborador]);
-  };
+    const aoNovoColaboradorAdicionado = (colaborador) => {
+        // Adiciona o colaborador ao time específico
+        setColaboradores(prevColaboradores => ({
+            ...prevColaboradores,
+            [colaborador.time]: [...prevColaboradores[colaborador.time], colaborador],
+        }));
+    };
 
-  return (
-    <div className="App">
-      <Banner />
-      <Forms  teams = {teams.map(team => team.nome)} aoColaboradorCadastrado={aoNovoColaboradorAdicionado} />
+    return (
+        <div className="App">
+            <Banner />
+            <Formulario
+                times={times.map((time) => time.nome)}
+                aoColaboradorCadastrado={aoNovoColaboradorAdicionado}
+            />
 
-      {teams.map(team => <Team 
-        key = {team.nome} 
-        nome={team.nome} 
-        corPrimaria={team.corPrimaria}
-        corSecundaria={team.corSecundaria}
-        colaboradores={colaboradores.filter(colaborador => colaborador.team === team.nome)}
-        />)}
-
-    </div>
-  );
+            {times.map((time) => (
+                <Time
+                    key={time.nome}
+                    nome={time.nome}
+                    corPrimaria={time.corPrimaria}
+                    corSecundaria={time.corSecundaria}
+                    colaboradores={colaboradores[time.nome]} // Passa os colaboradores por time
+                />
+            ))}
+        </div>
+    );
 }
 
 export default App;
