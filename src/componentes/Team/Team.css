@@ -8,6 +8,14 @@
     border-bottom: 4px solid var(--corPrimaria); 
     display: inline-block;
     padding-bottom: 8px;
-    color: var(--corPrimaria); 
+    color: var(--corPrimaria);
+}
+
+.team .Colaboradores{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 

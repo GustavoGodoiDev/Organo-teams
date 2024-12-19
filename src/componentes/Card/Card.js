@@ -1,18 +1,15 @@
-import './Card.css'
+import './Card.css';
 
-const Card = () => {
-    return(
-
-        <div className='colaborador'> 
-            <img src = 'https://github.com/GustavoGodoiDev.png' alt = 'Gustavo Godoi'/>
-
+function Card({ nome, imagem, cargo }) => {
+    return (
+        <div className='colaborador'>
+            <img src={imagem} alt={nome || 'Imagem do colaborador'} />
             <div className='rodape'>
-                <h4>Gustavo Godoi</h4>
-                <h5>FullStack Developer</h5>
+                <h4>{nome}</h4>
+                <h5>{cargo}</h5>
             </div>
-            
         </div>
-    )
+    );
 }
 
-export default Card
+export default Card;
