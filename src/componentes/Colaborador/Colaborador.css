@@ -1,25 +1,32 @@
+/* Colaborador */
 .colaborador {
     width: 280px;
-    margin: 16px;
-    transition: all 0.3s ease;
+    margin: 0 auto; /* Centraliza o colaborador */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens dentro do colaborador */
+    justify-content: space-between;
 }
 
+/* Cabeçalho do colaborador */
 .colaborador .cabecalho {
-    background-color: #F0F0F0;
+    background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
+    width: 100%; /* Ajusta a largura para se alinhar com o colaborador */
     padding: 16px;
-    text-align: center;
+    text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
 }
 
+/* Imagem do colaborador */
 .colaborador img {
     width: 100px;
-    height: 100px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
-    transition: all 0.3s ease;
+    margin: 0 auto; /* Centraliza a imagem */
 }
 
+/* Rodapé do colaborador */
 .colaborador .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
@@ -27,9 +34,11 @@
     padding-top: 90px;
     padding-bottom: 40px;
     margin-bottom: 10px;
-    transition: all 0.3s ease;
+    width: 100%; /* Ajusta a largura do rodapé para se alinhar com o colaborador */
+    text-align: center; /* Centraliza o conteúdo do rodapé */
 }
 
+/* Estilos para os textos do rodapé */
 .colaborador .rodape h4 {
     color: #6278F7;
     font-size: 18px;
@@ -43,32 +52,9 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
-    margin-bottom: 8px;
 }
 
-@media (max-width: 1024px) {
-    .colaborador {
-        width: 250px;
-    }
-
-    .colaborador img {
-        width: 90px;
-        bottom: -45px;
-    }
-
-    .colaborador .rodape {
-        padding-top: 85px;
-    }
-
-    .colaborador .rodape h4 {
-        font-size: 16px;
-    }
-
-    .colaborador .rodape h5 {
-        font-size: 16px;
-    }
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
     .colaborador {
         width: 220px;
@@ -114,27 +100,3 @@
         font-size: 14px;
     }
 }
-
-@media (max-width: 375px) {
-    .colaborador {
-        width: 160px;
-    }
-
-    .colaborador img {
-        width: 50px;
-        bottom: -25px;
-    }
-
-    .colaborador .rodape {
-        padding-top: 60px;
-    }
-
-    .colaborador .rodape h4 {
-        font-size: 12px;
-    }
-
-    .colaborador .rodape h5 {
-        font-size: 12px;
-    }
-}
-
