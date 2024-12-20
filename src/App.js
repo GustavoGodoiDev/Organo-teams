@@ -3,6 +3,7 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 
+//Definição dos times
 function App() {
     const times = [
         {
@@ -81,14 +82,15 @@ function App() {
         return initialColaboradores;
     });
 
+    //Adicionar o colaborador ao time especifico
     const aoNovoColaboradorAdicionado = (colaborador) => {
-        // Adiciona o colaborador ao time específico
         setColaboradores(prevColaboradores => ({
             ...prevColaboradores,
             [colaborador.time]: [...prevColaboradores[colaborador.time], colaborador],
         }));
     };
 
+    //Retorno da função App
     return (
         <div className="App">
             <Banner />

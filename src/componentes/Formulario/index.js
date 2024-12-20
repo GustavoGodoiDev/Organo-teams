@@ -4,10 +4,11 @@ import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import './Formulario.css';
 
+//Constante que recebe o valor das variaveis
 const Formulario = (props) => {
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
-    const [descricao, setDescricao] = useState(''); // Novo estado para descrição
+    const [descricao, setDescricao] = useState('');
     const [imagem, setImagem] = useState(null);
     const [imagemRecortada, setImagemRecortada] = useState(null);
     const [time, setTime] = useState('');
@@ -109,6 +110,7 @@ const Formulario = (props) => {
         setShowCropper(true);
     };
 
+    //Return do Formulário com os campos e suas configurações
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>

@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import './CampoTexto.css'
+import { useEffect, useRef } from 'react';
+import './CampoTexto.css';
 
 const CampoTexto = (props) => {
     const { obrigatorio, label, placeholder, valor, aoAlterado, tipo, ...outros } = props;
@@ -8,7 +8,6 @@ const CampoTexto = (props) => {
     // Função para ajustar a altura do textarea automaticamente
     function ajustarAlturaTextarea() {
         if (textareaRef.current) {
-
             // Resetando a altura para ajustar corretamente a expansão
             textareaRef.current.style.height = "auto";
             textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
@@ -17,8 +16,10 @@ const CampoTexto = (props) => {
 
     // Usamos useEffect para ajustar a altura ao inicializar ou quando o valor mudar
     useEffect(() => {
-        ajustarAlturaTextarea();
-    }, [valor]);
+        if (tipo === "textarea") {
+            ajustarAlturaTextarea();
+        }
+    }, [valor, tipo]);
 
     return (
         <div className="campo-texto">
@@ -34,17 +35,7 @@ const CampoTexto = (props) => {
                     placeholder={placeholder}
                     required={obrigatorio}
                     {...outros}
-                    style={{
-                        resize: "none", 
-                        overflow: "hidden", 
-                        minHeight: "60px", 
-                        width: "100%", 
-                        fontSize: "16px", 
-                        padding: "10px", 
-                        borderRadius: "15px", 
-                        border: "1px solid #ccc", 
-                        boxSizing: "border-box",
-                    }}
+                    className="campo-texto-area" // Adiciona uma classe para o estilo
                 />
             ) : (
                 <input
@@ -54,6 +45,7 @@ const CampoTexto = (props) => {
                     placeholder={placeholder}
                     required={obrigatorio}
                     {...outros}
+                    className="campo-texto-input" // Adiciona uma classe para o estilo
                 />
             )}
         </div>
