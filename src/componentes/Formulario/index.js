@@ -7,6 +7,7 @@ import './Formulario.css';
 const Formulario = (props) => {
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
+    const [descricao, setDescricao] = useState(''); // Novo estado para descrição
     const [imagem, setImagem] = useState(null);
     const [imagemRecortada, setImagemRecortada] = useState(null);
     const [time, setTime] = useState('');
@@ -32,12 +33,14 @@ const Formulario = (props) => {
         props.aoColaboradorCadastrado({
             nome,
             cargo,
+            descricao, // Incluímos a descrição no objeto enviado
             imagem: imagemRecortada,
             time,
         });
 
         setNome('');
         setCargo('');
+        setDescricao(''); // Limpa o campo de descrição
         setImagem(null);
         setImagemRecortada(null);
         setTime('');
@@ -89,7 +92,7 @@ const Formulario = (props) => {
     const handleApplyCrop = async () => {
         try {
             const croppedImage = await getCroppedImage();
-            setImagemRecortada(croppedImage); // Aqui estamos salvando a imagem recortada
+            setImagemRecortada(croppedImage);
             setShowCropper(false);
         } catch (error) {
             console.error('Erro ao aplicar recorte:', error);
@@ -103,7 +106,7 @@ const Formulario = (props) => {
     };
 
     const handleEditImage = () => {
-        setShowCropper(true);  // Reabre o modal de recorte
+        setShowCropper(true);
     };
 
     return (
@@ -124,6 +127,16 @@ const Formulario = (props) => {
                     valor={cargo}
                     aoAlterado={(valor) => setCargo(valor)}
                 />
+                <CampoTexto
+                    obrigatorio={false}
+                    label="Descrição"
+                    placeholder="Digite uma breve descrição (máx. 2.000 caracteres)"
+                    valor={descricao}
+                    aoAlterado={(valor) => {
+                        if (valor.length <= 2000) setDescricao(valor);
+                    }}
+                    tipo="textarea" // Permite que o campo seja um textarea
+                />
 
                 <div className="campo-texto">
                     <label>Imagem</label>
@@ -140,7 +153,7 @@ const Formulario = (props) => {
                     />
                 </div>
 
-                {imagem && !showCropper && imagemRecortada && (  // Aqui usamos a imagem recortada no preview
+                {imagem && !showCropper && imagemRecortada && (
                     <div className="preview-imagem">
                         <img src={imagemRecortada} alt="Imagem Selecionada" />
                         <button

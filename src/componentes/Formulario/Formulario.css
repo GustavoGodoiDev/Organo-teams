@@ -37,7 +37,6 @@
     }
 }
 
-/* Estilos para o campo de seleção de time */
 .campo-texto {
     margin-bottom: 16px;
 }
@@ -70,7 +69,6 @@
     scale: 1.03;
 }
 
-/* Estilo para a mensagem de erro */
 .erro-time {
     color: #e74c3c;
     font-size: 14px;
@@ -78,8 +76,6 @@
     margin-top: 8px;
 }
 
-/* Container principal do recorte */
-/* Modal de Recorte */
 .cropper-modal {
     position: fixed;
     top: 0;
@@ -93,7 +89,6 @@
     z-index: 9999;
 }
 
-/* Container do Cropper */
 .cropper-container {
     position: relative;
     width: 100%;
@@ -109,7 +104,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Barra de Controles (Zoom e Botões) */
 .cropper-controls {
     display: flex;
     justify-content: center;
@@ -117,20 +111,19 @@
     width: 100%;
     padding: 20px;
     position: absolute;
-    bottom: 0; 
-    background-color: #d3d3d3; 
-    border-top: 1px solid #eaeaea; 
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); 
-    border-radius: 0 0 10px 10px; 
-    z-index: 100; 
+    bottom: 0;
+    background-color: #d3d3d3;
+    border-top: 1px solid #eaeaea;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
     align-items: center;
 }
 
-/* Estilo dos botões de controle */
 .cropper-button {
     padding: 12px 32px;
     font-weight: bold;
-    border-radius: 30px; 
+    border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -141,7 +134,6 @@
     margin: 10px;
 }
 
-/* Botão Confirmar (azul) */
 .cropper-button.confirmar {
     background-color: #0084ff;
     color: rgb(255, 255, 255);
@@ -154,7 +146,6 @@
     transform: scale(1.05);
 }
 
-/* Botão Cancelar (vermelho) */
 .cropper-button.cancelar {
     background-color: #ff1900;
     color: white;
@@ -166,7 +157,6 @@
     transform: scale(1.05);
 }
 
-/* Slider para o Zoom */
 .cropper-slider {
     margin: 20px 0;
     width: 100%;
@@ -175,56 +165,43 @@
     cursor: pointer;
 }
 
-/* Ajuste do Slider */
 input[type="range"] {
     width: 100%;
     max-width: 300px;
     margin: 10px 0;
 }
 
-/* Garantir visibilidade da imagem */
 .cropper-container img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Estilos adicionais para o slider de zoom */
-.cropper-slider-label {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Estilos para a pré-visualização da imagem */
 .preview-imagem {
     margin-top: 20px;
     text-align: left;
     display: block;
-    width: 120px;  /* Aumenta o tamanho da imagem */
-    height: auto; 
-    object-fit: cover; /* Garantir que a imagem ocupe o espaço e mantenha a proporção */
-    overflow: visible; 
-    z-index: 10; /* Garante que fique acima dos outros componentes */
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    overflow: visible;
+    z-index: 10;
     position: relative;
-    margin-left: 10px; /* Corrige a margem à esquerda */
+    margin-left: 10px;
 }
 
-/* Garantir que a imagem tenha largura e altura adequadas */
 .preview-imagem img {
-    width: 100%;  /* Garantir que a imagem ocupe 100% da largura */
-    height: 100%; /* Garantir que a imagem ocupe 100% da altura */
-    object-fit: cover; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
 }
 
-/* Ajuste do botão de abrir o Cropper */
 .preview-imagem button {
     display: block;
-    margin-top: 10px; /* Ajusta a margem para dar espaço entre a imagem e o botão */
-    padding: 10px 30px; /* Reduz o padding do botão para evitar o botão muito grande */
+    margin-top: 10px;
+    padding: 10px 30px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
@@ -232,16 +209,13 @@ input[type="range"] {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-left: 0; /* Remove qualquer margem à esquerda que possa afetar o botão */
-    width: 100%; /* Garante que o botão ocupe toda a largura disponível do contêiner */
-    z-index: 20; /* Coloca o botão em uma camada superior */
+    margin-left: 0;
+    width: 100%;
+    z-index: 20;
     box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
 }
 
-/* Botão de hover */
 .preview-imagem button:hover {
     background-color: #3b5bd2;
     transform: scale(1.05);
 }
-
-
