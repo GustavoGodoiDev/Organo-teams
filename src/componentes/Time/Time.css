@@ -19,9 +19,20 @@
     margin-top: 32px;
     gap: 10px;
     max-width: 100%;
-    height: fit-content;
+    height: auto; 
     flex-wrap: wrap;
+    transition: all 0.3s ease; 
 }
+
+.time .colaboradores .colaborador {
+    transition: transform 0.3s ease-in-out; 
+    transform: scale(1); 
+}
+
+.time .colaboradores .colaborador:hover {
+    transform: scale(1.1); 
+}
+
 
 @media (max-width: 1024px) {
     .time h3 {

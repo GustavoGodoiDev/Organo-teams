@@ -86,11 +86,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Assegura que o modal fique sobre outros elementos */
+    z-index: 9999;
 }
 
 /* Container do Cropper */
@@ -117,12 +117,12 @@
     width: 100%;
     padding: 20px;
     position: absolute;
-    bottom: 0; /* Posiciona na parte inferior da área do cropper */
-    background-color: #d3d3d3; /* Fundo branco para a barra */
-    border-top: 1px solid #eaeaea; /* Linha divisória */
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
-    border-radius: 0 0 10px 10px; /* Borda arredondada na parte inferior */
-    z-index: 100; /* Garante que os botões fiquem sobre o cropper */
+    bottom: 0; 
+    background-color: #d3d3d3; 
+    border-top: 1px solid #eaeaea; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 0 0 10px 10px; 
+    z-index: 100; 
     align-items: center;
 }
 
@@ -130,7 +130,7 @@
 .cropper-button {
     padding: 12px 32px;
     font-weight: bold;
-    border-radius: 30px; /* Botão redondo */
+    border-radius: 30px; 
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -200,12 +200,12 @@ input[type="range"] {
 /* Estilos para a pré-visualização da imagem */
 .preview-imagem {
     margin-top: 20px;
-    text-align: left; /* Ajusta para a esquerda */
+    text-align: left;
     display: block;
     width: 120px;  /* Aumenta o tamanho da imagem */
-    height: auto; /* Ajusta a altura automaticamente */
+    height: auto; 
     object-fit: cover; /* Garantir que a imagem ocupe o espaço e mantenha a proporção */
-    overflow: visible; /* Permite que o botão não seja ocultado */
+    overflow: visible; 
     z-index: 10; /* Garante que fique acima dos outros componentes */
     position: relative;
     margin-left: 10px; /* Corrige a margem à esquerda */
