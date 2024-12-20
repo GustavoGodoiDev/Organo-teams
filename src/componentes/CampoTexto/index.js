@@ -6,14 +6,14 @@ const CampoTexto = (props) => {
     const textareaRef = useRef(null);
 
     // Função para ajustar a altura do textarea automaticamente
-    const ajustarAlturaTextarea = () => {
+    function ajustarAlturaTextarea() {
         if (textareaRef.current) {
-            
+
             // Resetando a altura para ajustar corretamente a expansão
             textareaRef.current.style.height = "auto";
             textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
         }
-    };
+    }
 
     // Usamos useEffect para ajustar a altura ao inicializar ou quando o valor mudar
     useEffect(() => {

@@ -10,7 +10,7 @@
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
     width: 100%;
     box-sizing: border-box;
     transition: all 0.3s ease;
@@ -48,25 +48,36 @@
     font-weight: bold;
 }
 
-.campo-texto select {
+.campo-texto input,
+.campo-texto select,
+.campo-texto textarea {
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     width: 100%;
     border: none;
     font-size: 18px;
-    padding: 20px;
+    padding: 16px;
     box-sizing: border-box;
     border-radius: 20px;
     transition: all ease 0.3s;
 }
 
-.campo-texto select:focus {
+.campo-texto input:focus,
+.campo-texto select:focus,
+.campo-texto textarea:focus {
     border-color: #007bff;
     outline: none;
 }
 
-.campo-texto select:hover {
+.campo-texto input:hover,
+.campo-texto select:hover,
+.campo-texto textarea:hover {
     scale: 1.03;
+}
+
+.campo-texto textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 .erro-time {
@@ -155,14 +166,6 @@
 .cropper-button.cancelar:hover {
     background-color: #c0392b;
     transform: scale(1.05);
-}
-
-.cropper-slider {
-    margin: 20px 0;
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    cursor: pointer;
 }
 
 input[type="range"] {
