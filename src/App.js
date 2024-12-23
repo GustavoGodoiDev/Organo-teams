@@ -13,7 +13,7 @@ function App() {
             corSecundaria: '#D4F4F1'
         },
         {
-            nome: 'Recursos humanos',
+            nome: 'Recursos Humanos',
             corPrimaria: '#82CFFA',
             corSecundaria: '#E8F8FF'
         },
@@ -28,7 +28,7 @@ function App() {
             corSecundaria: '#FDE7E8'
         },
         {
-            nome: 'Tecnologia da informação',
+            nome: 'Tecnologia da Informação',
             corPrimaria: '#1E90FF',
             corSecundaria: '#D6EAF8'
         },
@@ -68,7 +68,7 @@ function App() {
             corSecundaria: '#FDE3A7'
         },
         {
-            nome: 'Time de campo',
+            nome: 'Time de Campo',
             corPrimaria: '#E74C3C',
             corSecundaria: '#FADBD8'
         }
