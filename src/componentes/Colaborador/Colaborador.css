@@ -1,82 +1,63 @@
-/* Colaborador */
 .colaborador {
-    width: calc(20% + 120px); /* Escala proporcionalmente em relação ao tamanho da tela */
-    max-width: 280px; /* Define um tamanho máximo */
-    min-width: 180px; /* Define um tamanho mínimo */
-    margin: 0 auto; 
+    width: calc(20% + 120px);
+    max-width: 280px;
+    min-width: 180px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens dentro do colaborador */
+    align-items: center;
     justify-content: space-between;
 }
 
-/* Cabeçalho do colaborador */
 .colaborador .cabecalho {
     background-color: #F0F0F0;
     border-radius: 10px 10px 0px 0px;
-    width: 100%; /* Proporcional ao tamanho do cartão */
-    padding: 0.05rem; /* Unidades relativas para o padding */
-    text-align: center; 
+    width: 90%;
+    padding: 0.05rem;
+    text-align: center;
 }
 
-/* Imagem do colaborador */
 .colaborador img {
-    width: 8.5rem; /* Escala em relação ao cartão */
-    max-width: 120px; /* Define um tamanho máximo */
-    min-width: 60px; 
-    height: auto; 
-    border-radius: 50%; 
+    width: 8.5rem;
+    max-width: 120px;
+    min-width: 60px;
+    height: auto;
+    border-radius: 50%;
     position: relative;
-    bottom: -40px; /* Ajusta a posição da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
+    bottom: -40px;
+    margin: 0 auto;
 }
 
-/* Rodapé do colaborador */
 .colaborador .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding: 1rem 1rem; 
-    margin-bottom: 10px;
-    width: 90%; 
-    text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 3rem 1.5rem; /* Aumentei o padding para 3rem e 1.5rem */
+    width: 90%;
+    text-align: center;
+    margin-top: 0px;
 }
 
-/* Estilos para os textos do rodapé */
 .colaborador .rodape h4 {
     color: #6278F7;
-    font-size: 1rem; /* Fonte responsiva */
+    font-size: 1rem;
     line-height: 1.5rem;
     font-weight: bold;
     margin-bottom: 8px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .colaborador .rodape h5 {
-    font-size: 0.9rem; /* Fonte um pouco menor */
+    font-size: 0.9rem;
     line-height: 1.2rem;
     color: #212121;
     padding: 0 1rem;
+    margin-top: 10px;
 }
 
-/* Responsividade ajustada */
 @media (max-width: 768px) {
     .colaborador {
-        width: calc(25% + 100px); /* Ajusta proporcionalmente */
-    }
-
-    .colaborador img {
-        width: 8.5rem; /* Proporcionalmente menor */
-    }
-
-    .colaborador .rodape {
-        padding: 1.5rem 0.8rem; /* Reduz o espaçamento */
-    }
-}
-
-@media (max-width: 480px) {
-    .colaborador {
-        width: calc(30% + 80px); /* Ajusta ainda mais em telas pequenas */
+        width: calc(25% + 100px);
     }
 
     .colaborador img {
@@ -84,10 +65,24 @@
     }
 
     .colaborador .rodape {
-        padding: 1rem 0.6rem; /* Espaçamento mais compacto */
+        padding: 2rem 1rem; /* Ajustado para o tamanho de tela menor */
+    }
+}
+
+@media (max-width: 480px) {
+    .colaborador {
+        width: calc(30% + 80px);
+    }
+
+    .colaborador img {
+        width: 8.5rem;
+    }
+
+    .colaborador .rodape {
+        padding: 1.5rem 1rem; /* Aumentei o padding para telas menores */
     }
 
     .colaborador .rodape h4, .colaborador .rodape h5 {
-        font-size: 0.8rem; /* Fontes menores */
+        font-size: 0.8rem;
     }
 }

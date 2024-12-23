@@ -1,0 +1,39 @@
+/* Definindo variáveis de cores */
+:root {
+    --cor-primaria: #6278F7; /* Azul */
+    --cor-secundaria: #F0F0F0; /* Cinza claro */
+    --cor-texto-principal: #212121; /* Preto */
+    --cor-texto-secundario: #303030; /* Cinza escuro */
+    --cor-fundo-rodape: #FFFFFF; /* Branco */
+    --cor-borda: rgba(0, 0, 0, 0.08); /* Cor para sombras e bordas */
+}
+
+/* Definindo variáveis de fontes */
+:root {
+    --font-family-principal: 'Arial', sans-serif; /* Fonte principal */
+    --font-family-secundaria: 'Verdana', sans-serif; /* Fonte secundária */
+    
+    --font-size-titulo: 1rem; /* Tamanho da fonte para os títulos */
+    --font-size-subtitulo: 0.9rem; /* Tamanho da fonte para subtítulos */
+    --font-size-texto: 0.8rem; /* Tamanho da fonte para texto comum */
+    
+    --font-weight-bold: bold; /* Peso de fonte para textos em negrito */
+    --font-weight-normal: normal; /* Peso normal */
+}
+
+/* variables.css */
+:root {
+    --primary-color: #6278f7; /* Cor de fundo do botão */
+    --hover-color: #000000; /* Cor de hover */
+    --text-color-light: #FFF; /* Cor do texto */
+    --font-weight-bold: 700; /* Peso da fonte bold */
+    --font-size-large: 20px; /* Tamanho da fonte grande */
+    --font-size-medium: 18px; /* Tamanho da fonte média */
+    --font-size-small: 16px; /* Tamanho da fonte pequena */
+    --padding-large: 28px; /* Padding grande */
+    --padding-medium: 20px; /* Padding médio */
+    --padding-small: 15px; /* Padding pequeno */
+    --margin-large: 32px; /* Margem grande */
+    --margin-medium: 20px; /* Margem média */
+}
+
