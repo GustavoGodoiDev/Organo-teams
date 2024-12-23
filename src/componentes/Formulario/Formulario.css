@@ -16,6 +16,11 @@
     transition: all 0.3s ease;
 }
 
+.formulario :hover{
+    background-color: #000000;
+    color: #F2F2F2;
+}
+
 @media (max-width: 1024px) {
     .formulario form {
         max-width: 80%;

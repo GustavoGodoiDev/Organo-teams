@@ -1,64 +1,100 @@
-/* Defina um layout básico para telas grandes, como desktops */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0px;
+/* Declaração de variáveis globais */
+:root {
+  /* Cores principais */
+  --cor-primaria: #0084ff; /* Azul */
+  --cor-secundaria: #e74c3c; /* Vermelho */
+  --cor-fundo-claro: #F2F2F2; /* Fundo claro */
+  --cor-fundo-escuro: #000000; /* Fundo escuro */
+  --cor-borda: #eaeaea; /* Cor da borda */
+  --cor-hover-primaria: #3b5bd2; /* Hover azul mais escuro */
+  --cor-hover-secundaria: #c0392b; /* Hover vermelho mais escuro */
+  --cor-texto: #333333; /* Cor do texto principal */
+  --cor-texto-claro: #FFFFFF; /* Texto claro */
+  --cor-sombra: rgba(0, 0, 0, 0.08); /* Sombra suave */
+  --cor-fundo-botoes: #d3d3d3; /* Fundo dos botões */
+  --cor-borda-input: #007bff; /* Borda do input no foco */
+
+  /* Fontes */
+  --font-family-principal: 'Poppins', sans-serif; /* Fonte principal */
+  --font-family-secundaria: 'Montserrat', sans-serif; /* Fonte secundária */
+
+  /* Tamanhos padrão */
+  --font-size-base: 16px;
+  --font-size-titulo: 24px;
+  --font-size-subtitulo: 20px;
+}
+
+/* Resetando margens e paddings, além de garantir que a fonte e o comportamento de texto sejam consistentes */
+* {
+  margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: var(--font-family-principal);
+  font-size: var(--font-size-base);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo-claro);
+  line-height: 1.5;
+}
+
+/* Definindo o estilo de texto global */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-secundaria);
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+
+a:hover {
+  color: var(--cor-hover-primaria);
+}
+
+/* Botões globais */
+button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-hover-primaria);
+  transform: scale(1.05);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--cor-borda);
   width: 100%;
-  margin: 0 auto;
+  box-sizing: border-box;
+  margin: 8px 0;
 }
 
-/* Media query para telas pequenas (celulares) */
-@media (max-width: 768px) {
-  /* Alterações específicas para telas de celulares */
-  body {
-      font-size: 16px;  /* Ajuste a fonte para dispositivos menores */
-  }
-
-  .banner{
-    margin-bottom: 15px;
-  }
-
-  .container {
-      width: 95%; /* Use uma largura maior para telas pequenas */
-  }
-
-  .campo-texto {
-      width: 100%; /* Ajuste o tamanho dos campos de texto */
-  }
-
-  .lista-suspensa select {
-      width: 100%; /* Certifique-se de que a lista suspensa ocupe toda a largura */
-  }
-
-  .formulario {
-      padding: 20px;
-      margin-top: 10px;  /* Diminua o espaço acima do formulário */
-  }
-}
-
-/* Media query para telas de tablets (a partir de 768px) */
-@media (max-width: 1024px) {
-  /* Ajustes para telas de tablets */
-
-  .banner{
-    margin-bottom: 15px;
-  }
-  
-  .container {
-      width: 90%;
-  }
-
-  .campo-texto {
-      width: 100%;
-  }
-
-  .formulario {
-      padding: 30px;
-  }
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--cor-borda-input);
+  outline: none;
 }

@@ -187,6 +187,7 @@ const Formulario = (props) => {
                                     onClick={handleApplyCrop}
                                 >
                                     Confirmar
+                                    
                                 </button>
                                 <button
                                     className="cropper-button cancelar"
