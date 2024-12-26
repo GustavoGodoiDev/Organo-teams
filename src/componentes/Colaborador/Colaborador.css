@@ -1,6 +1,8 @@
+@import '../../variable.css';
+
 .colaborador {
     width: calc(20% + 120px);
-    max-width: 280px;
+    max-width: var(--margin-large);
     min-width: 180px;
     margin: 0 auto;
     display: flex;
@@ -10,7 +12,7 @@
 }
 
 .colaborador .cabecalho {
-    background-color: #F0F0F0;
+    background-color: var(--cor-secundaria);
     border-radius: 10px 10px 0px 0px;
     width: 90%;
     padding: 0.05rem;
@@ -18,7 +20,7 @@
 }
 
 .colaborador img {
-    width: 8.5rem;
+    width: var(--font-size-large);
     max-width: 120px;
     min-width: 60px;
     height: auto;
@@ -29,30 +31,30 @@
 }
 
 .colaborador .rodape {
-    background: #FFFFFF;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    background: var(--cor-fundo-rodape);
+    box-shadow: 5px 5px 15px var(--cor-borda);
     border-radius: 0px 0px 10px 10px;
-    padding: 3rem 1.5rem; /* Aumentei o padding para 3rem e 1.5rem */
+    padding: var(--padding-large) var(--padding-medium); 
     width: 90%;
     text-align: center;
     margin-top: 0px;
 }
 
 .colaborador .rodape h4 {
-    color: #6278F7;
-    font-size: 1rem;
+    color: var(--cor-primaria);
+    font-size: var(--font-size-medium);
     line-height: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    margin-top: 10px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--padding-small);
+    margin-top: var(--padding-small);
 }
 
 .colaborador .rodape h5 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     line-height: 1.2rem;
-    color: #212121;
-    padding: 0 1rem;
-    margin-top: 10px;
+    color: var(--cor-texto-principal);
+    padding: 0 var(--padding-small);
+    margin-top: var(--padding-small);
 }
 
 @media (max-width: 768px) {
@@ -61,11 +63,11 @@
     }
 
     .colaborador img {
-        width: 8.5rem;
+        width: var(--font-size-large);
     }
 
     .colaborador .rodape {
-        padding: 2rem 1rem; /* Ajustado para o tamanho de tela menor */
+        padding: var(--padding-medium) var(--padding-small);
     }
 }
 
@@ -75,14 +77,14 @@
     }
 
     .colaborador img {
-        width: 8.5rem;
+        width: var(--font-size-large);
     }
 
     .colaborador .rodape {
-        padding: 1.5rem 1rem; /* Aumentei o padding para telas menores */
+        padding: var(--padding-small) var(--padding-small);
     }
 
     .colaborador .rodape h4, .colaborador .rodape h5 {
-        font-size: 0.8rem;
+        font-size: var(--font-size-small);
     }
 }

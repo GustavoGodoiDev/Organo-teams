@@ -1,11 +1,13 @@
+@import '../../variable.css';
+
 /* Lista Suspensa Responsiva */
 div.lista-suspensa select {
-    background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    background-color: var(--cor-fundo-rodape);
+    box-shadow: 10px 10px 30px var(--cor-borda);
     width: 100%;
     border: none;
-    font-size: 18px;
-    padding: 20px;
+    font-size: var(--font-size-medium);
+    padding: var(--padding-medium);
     box-sizing: border-box;
     border-radius: 20px;
     transition: all ease 0.3s;
@@ -17,21 +19,21 @@ div.lista-suspensa select:hover {
 
 @media (max-width: 1024px) {
     div.lista-suspensa select {
-        padding: 16px;
-        font-size: 16px;
+        padding: var(--padding-small);
+        font-size: var(--font-size-small);
     }
 }
 
 @media (max-width: 768px) {
     div.lista-suspensa select {
-        padding: 12px;
-        font-size: 14px;
+        padding: var(--padding-small);
+        font-size: var(--font-size-small);
     }
 }
 
 @media (max-width: 480px) {
     div.lista-suspensa select {
-        padding: 10px;
-        font-size: 12px;
+        padding: var(--padding-small);
+        font-size: var(--font-size-small);
     }
 }

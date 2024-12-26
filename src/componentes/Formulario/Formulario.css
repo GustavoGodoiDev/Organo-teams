@@ -1,16 +1,18 @@
+@import '../../variable.css';
+
 .formulario {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
-    font-weight: bold;
+    margin: var(--margin-large) 0;
+    font-weight: var(--font-weight-bold);
 }
 
 .formulario form {
     max-width: 60%;
-    background-color: #F2F2F2;
+    background-color: var(--cor-fundo-rodape);
     border-radius: 20px;
-    padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    padding: var(--padding-large) var(--padding-large);
+    box-shadow: 8px 8px 16px var(--cor-borda);
     width: 100%;
     box-sizing: border-box;
     transition: all 0.3s ease;
@@ -19,44 +21,44 @@
 @media (max-width: 1024px) {
     .formulario form {
         max-width: 80%;
-        padding: 24px 48px;
+        padding: var(--padding-medium) var(--padding-medium);
     }
 }
 
 @media (max-width: 768px) {
     .formulario form {
         max-width: 90%;
-        padding: 16px 32px;
+        padding: var(--padding-small) var(--padding-small);
     }
 }
 
 @media (max-width: 480px) {
     .formulario form {
         max-width: 100%;
-        padding: 12px 16px;
+        padding: var(--padding-small) var(--padding-small);
     }
 }
 
 .campo-texto {
-    margin-bottom: 16px;
+    margin-bottom: var(--padding-small);
 }
 
 .campo-texto label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: bold;
+    margin-bottom: var(--padding-small);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
 }
 
 .campo-texto input,
 .campo-texto select,
 .campo-texto textarea {
-    background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    background-color: var(--cor-fundo-rodape);
+    box-shadow: 10px 10px 30px var(--cor-borda);
     width: 100%;
     border: none;
-    font-size: 18px;
-    padding: 16px;
+    font-size: var(--font-size-medium);
+    padding: var(--padding-medium);
     box-sizing: border-box;
     border-radius: 20px;
     transition: all ease 0.3s;
@@ -65,7 +67,7 @@
 .campo-texto input:focus,
 .campo-texto select:focus,
 .campo-texto textarea:focus {
-    border-color: #007bff;
+    border-color: var(--cor-primaria);
     outline: none;
 }
 
@@ -82,9 +84,9 @@
 
 .erro-time {
     color: #e74c3c;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 8px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--padding-small);
 }
 
 .cropper-modal {
@@ -118,9 +120,9 @@
 .cropper-controls {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: var(--padding-small);
     width: 100%;
-    padding: 20px;
+    padding: var(--padding-medium);
     position: absolute;
     bottom: 0;
     background-color: #d3d3d3;
@@ -132,24 +134,24 @@
 }
 
 .cropper-button {
-    padding: 12px 32px;
-    font-weight: bold;
+    padding: var(--padding-small) var(--padding-large);
+    font-weight: var(--font-weight-bold);
     border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 10px;
+    margin: var(--padding-small);
 }
 
 .cropper-button.confirmar {
-    background-color: #0084ff;
-    color: rgb(255, 255, 255);
+    background-color: var(--cor-primaria);
+    color: var(--text-color-light);
     border: none;
-    margin: 10px;
+    margin: var(--padding-small);
 }
 
 .cropper-button.confirmar:hover {
@@ -159,7 +161,7 @@
 
 .cropper-button.cancelar {
     background-color: #ff1900;
-    color: white;
+    color: var(--text-color-light);
     border: none;
 }
 
@@ -171,7 +173,7 @@
 input[type="range"] {
     width: 100%;
     max-width: 300px;
-    margin: 10px 0;
+    margin: var(--padding-small) 0;
 }
 
 .cropper-container img {
@@ -181,7 +183,7 @@ input[type="range"] {
 }
 
 .preview-imagem {
-    margin-top: 20px;
+    margin-top: var(--padding-large);
     text-align: left;
     display: block;
     width: 120px;
@@ -190,7 +192,7 @@ input[type="range"] {
     overflow: visible;
     z-index: 10;
     position: relative;
-    margin-left: 10px;
+    margin-left: var(--padding-small);
 }
 
 .preview-imagem img {
@@ -203,13 +205,13 @@ input[type="range"] {
 
 .preview-imagem button {
     display: block;
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: 16px;
-    font-weight: bold;
+    margin-top: var(--padding-medium);
+    padding: var(--padding-small) var(--padding-large);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
     border-radius: 10px;
-    background-color: #0084ff;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--text-color-light);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-left: 0;

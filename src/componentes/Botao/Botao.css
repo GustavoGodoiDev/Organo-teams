@@ -1,22 +1,24 @@
+@import '../../variable.css';
+
 /* Estilo base do botão */
 .botao {
-    background-color: #6278f7;
+    background-color: var(--primary-color);
     border-radius: 10px;
-    font-weight: 700;
-    font-size: 20px;
-    padding: 28px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large);
+    padding: var(--padding-large);
     border: none;
     cursor: pointer;
-    color: #FFF;
-    margin: 32px 0;
+    color: var(--text-color-light);
+    margin: var(--margin-large) 0;
     transition: all ease 0.3s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Efeito de hover */
 .botao:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--hover-color);
+    color: var(--text-color-light);
     scale: 1.05;
 }
 
@@ -24,16 +26,16 @@
 @media (max-width: 768px) {
     .botao {
         width: 100%; 
-        font-size: 18px; 
-        padding: 20px;
-        margin: 20px 0; 
+        font-size: var(--font-size-medium); 
+        padding: var(--padding-medium);
+        margin: var(--margin-medium) 0; 
     }
 }
 
 /* Responsividade para telas muito pequenas (smartphones) */
 @media (max-width: 480px) {
     .botao {
-        font-size: 16px; 
-        padding: 15px; 
+        font-size: var(--font-size-small); 
+        padding: var(--padding-small); 
     }
 }

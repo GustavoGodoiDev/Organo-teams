@@ -1,10 +1,12 @@
+@import '../../variable.css';
+
 .banner {
-    background-color: #6278F7;
+    background-color: var(--primary-color);
     text-align: center;
-    padding: 20px;
+    padding: var(--padding-medium);
     width: 100%;
     min-height: 200px;
-    margin-bottom: 15px;
+    margin-bottom: var(--margin-medium);
 }
 
 .banner img {
@@ -14,24 +16,24 @@
 }
 
 .banner h1 {
-    font-size: 2em;
-    color: white;
-    margin: 10px 0;
+    font-size: var(--font-size-large);
+    color: var(--text-color-light);
+    margin: var(--padding-small) 0;
 }
 
 @media (max-width: 768px) {
     .banner {
-        padding: 15px;
+        padding: var(--padding-medium);
         min-height: 150px;
     }
 
     .banner h1 {
-        font-size: 1.5em;
+        font-size: var(--font-size-medium);
     }
 }
 
 @media (max-width: 480px) {
     .banner h1 {
-        font-size: 1.2em;
+        font-size: var(--font-size-small);
     }
 }
