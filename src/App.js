@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
-
+import Footer from './componentes/Footer/footer';  
 
 //Definição dos times
 function App() {
@@ -109,7 +109,10 @@ function App() {
                     corSecundaria={time.corSecundaria}
                     colaboradores={colaboradores[time.nome]} // Passa os colaboradores por time
                 />
+
             ))}
+
+            <Footer/>
         </div>
     );
 }

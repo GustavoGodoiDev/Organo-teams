@@ -1,0 +1,91 @@
+/* Footer.css */
+
+/* Definindo estilo geral do footer */
+.footer {
+    background: var(--gradient-background);
+    font-family: var(--font-family-principal);
+    padding: var(--padding-large) 0;
+    text-align: center;
+}
+
+/* Container principal do footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do logo do footer */
+.footer-logo h2 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--cor-texto-principal);
+    margin-bottom: var(--margin-medium);
+    color: var(--cor-texto-terciario);
+}
+
+/* Estilo para os links do footer */
+.footer-links {
+    display: flex;
+    gap: var(--margin-small);
+    margin-bottom: var(--margin-large);
+}
+
+.footer-links a {
+    color: var(--cor-texto-principal);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    padding: var(--padding-smaller);
+    transition: color 0.3s ease;
+    color: var(--cor-texto-terciario);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo para as redes sociais */
+.footer-social {
+    display: flex;
+    gap: var(--margin-small);
+    margin-bottom: var(--margin-medium);
+    align-items: center;  /* Alinha os ícones e texto verticalmente */
+}
+
+.footer-social a,
+.footer-links a {  /* Adiciona o mesmo estilo para os links de redes sociais e outros links */
+    display: flex;
+    align-items: center;  /* Alinha o ícone à esquerda do texto */
+    color: var(--cor-texto-terciario);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    padding: var(--padding-smaller);
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover,
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo para o ícone social e dos links */
+.footer-social a svg,
+.footer-links a svg {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 24px;   /* Tamanho do ícone */
+}
+
+/* Estilo para a parte inferior do footer */
+.footer-bottom {
+    margin-top: var(--margin-large);
+    font-size: var(--font-size-small);
+    color: var(--cor-texto-secundario);
+    color: var(--cor-texto-terciario);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
