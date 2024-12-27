@@ -31,6 +31,8 @@
     position: relative;
     bottom: -40px;
     margin: 0 auto;
+    border: 4px solid var(--cor-fundo-claro);
+    
 }
 
 /* Rodapé do card do colaborador */
