@@ -3,7 +3,7 @@
 .colaborador {
     width: calc(20% + 120px);
     max-width: var(--margin-large);
-    min-width: 180px;
+    min-width: 220px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 .colaborador .cabecalho {
-    background-color: var(--cor-secundaria);
+    background: var(--gradient-background);
     border-radius: 10px 10px 0px 0px;
     width: 90%;
     padding: 0.05rem;
@@ -22,7 +22,7 @@
 .colaborador img {
     width: var(--font-size-large);
     max-width: 120px;
-    min-width: 60px;
+    min-width: 80px;
     height: auto;
     border-radius: 50%;
     position: relative;
@@ -31,7 +31,7 @@
 }
 
 .colaborador .rodape {
-    background: var(--cor-fundo-rodape);
+    background: var(--cor-terciaria-branco);
     box-shadow: 5px 5px 15px var(--cor-borda);
     border-radius: 0px 0px 10px 10px;
     padding: var(--padding-large) var(--padding-medium); 
@@ -51,6 +51,7 @@
 
 .colaborador .rodape h5 {
     font-size: var(--font-size-small);
+    font-weight: lighter;
     line-height: 1.2rem;
     color: var(--cor-texto-principal);
     padding: 0 var(--padding-small);

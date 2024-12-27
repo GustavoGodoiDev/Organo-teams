@@ -9,70 +9,71 @@ function App() {
     const times = [
         {
             nome: 'Diretoria',
-            corPrimaria: '#1ABC9C',
-            corSecundaria: '#D4F4F1'
+            corPrimaria: 'rgba(26, 188, 156, 0.7)', // Adicionado alfa para transparência
+            corSecundaria: 'rgba(212, 244, 241, 0.5)'
         },
         {
             nome: 'Recursos Humanos',
-            corPrimaria: '#82CFFA',
-            corSecundaria: '#E8F8FF'
+            corPrimaria: 'rgba(130, 207, 250, 0.7)',
+            corSecundaria: 'rgba(232, 248, 255, 0.5)'
         },
         {
             nome: 'Financeiro',
-            corPrimaria: '#27AE60',
-            corSecundaria: '#D5F5E3'
+            corPrimaria: 'rgba(39, 174, 96, 0.7)',
+            corSecundaria: 'rgba(213, 245, 227, 0.5)'
         },
         {
             nome: 'Contábil',
-            corPrimaria: '#E06B69',
-            corSecundaria: '#FDE7E8'
+            corPrimaria: 'rgba(224, 107, 105, 0.7)',
+            corSecundaria: 'rgba(253, 231, 232, 0.5)'
         },
         {
             nome: 'Tecnologia da Informação',
-            corPrimaria: '#1E90FF',
-            corSecundaria: '#D6EAF8'
+            corPrimaria: 'rgba(30, 144, 255, 0.7)',
+            corSecundaria: 'rgba(214, 234, 248, 0.5)'
         },
         {
             nome: 'Supply Chain',
-            corPrimaria: '#8E44AD',
-            corSecundaria: '#F5EEF8'
+            corPrimaria: 'rgba(142, 68, 173, 0.7)',
+            corSecundaria: 'rgba(245, 238, 248, 0.5)'
         },
         {
             nome: 'Logística',
-            corPrimaria: '#FFBA05',
-            corSecundaria: '#FFF5D9'
+            corPrimaria: 'rgba(255, 186, 5, 0.7)',
+            corSecundaria: 'rgba(255, 245, 217, 0.5)'
         },
         {
             nome: 'Engenharia',
-            corPrimaria: '#7D3C98',
-            corSecundaria: '#EBDEF0'
+            corPrimaria: 'rgba(125, 60, 152, 0.7)',
+            corSecundaria: 'rgba(235, 222, 240, 0.5)'
         },
         {
             nome: 'Projetos',
-            corPrimaria: '#2980B9',
-            corSecundaria: '#D6EAF8'
+            corPrimaria: 'rgba(41, 128, 185, 0.7)',
+            corSecundaria: 'rgba(214, 234, 248, 0.5)'
         },
         {
             nome: 'Facilities',
-            corPrimaria: '#16A085',
-            corSecundaria: '#D1F2EB'
+            corPrimaria: 'rgba(22, 160, 133, 0.7)',
+            corSecundaria: 'rgba(209, 242, 235, 0.5)'
         },
         {
             nome: 'Produção',
-            corPrimaria: '#C0392B',
-            corSecundaria: '#F9EBEA'
+            corPrimaria: 'rgba(192, 57, 43, 0.7)',
+            corSecundaria: 'rgba(249, 235, 234, 0.5)'
         },
         {
             nome: 'Vendas',
-            corPrimaria: '#E67E22',
-            corSecundaria: '#FDE3A7'
+            corPrimaria: 'rgba(230, 126, 34, 0.7)',
+            corSecundaria: 'rgba(253, 227, 167, 0.5)'
         },
         {
             nome: 'Time de Campo',
-            corPrimaria: '#E74C3C',
-            corSecundaria: '#FADBD8'
+            corPrimaria: 'rgba(231, 76, 60, 0.7)',
+            corSecundaria: 'rgba(250, 219, 216, 0.5)'
         }
     ];
+    
 
     // Estado para armazenar colaboradores organizados por time
     const [colaboradores, setColaboradores] = useState(() => {

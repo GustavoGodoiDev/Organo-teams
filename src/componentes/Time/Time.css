@@ -3,11 +3,15 @@
 /* Time Responsivo */
 .time {
     text-align: center;
-    padding: var(--padding-large);
+    background: var(--corPrimaria); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    color: var(--corSecundaria); 
 }
 
 .time h3 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-larger);
     border-bottom: 4px solid var(--cor-texto-principal);
     display: inline-block;
     padding-bottom: var(--padding-small);
@@ -19,16 +23,19 @@
     justify-content: center;
     align-items: center;
     margin-top: var(--margin-large);
+    margin-bottom: var(--margin-small);
     gap: var(--margin-medium);
     max-width: 100%;
     height: auto; 
     flex-wrap: wrap;
     transition: all 0.3s ease; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .time .colaboradores .colaborador {
     transition: transform 0.3s ease-in-out; 
     transform: scale(1); 
+    font-family: 'Poppins', sans-serif;
 }
 
 .time .colaboradores .colaborador:hover {
