@@ -3,6 +3,7 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Footer from './componentes/Footer/footer';  
+import Header from './componentes/Header/header';
 
 //Definição dos times
 function App() {
@@ -95,6 +96,9 @@ function App() {
     //Retorno da função App
     return (
         <div className="App">
+
+            <Header/>
+            
             <Banner />
             <Formulario
                 times={times.map((time) => time.nome)}

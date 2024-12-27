@@ -1,0 +1,92 @@
+/* Header.css */
+
+/* Definindo o estilo geral do header */
+.header {
+    background: var(--gradient-background);
+    font-family: var(--font-family-principal);
+    padding: var(--padding-large) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Sombras para dar destaque */
+}
+
+/* Container do header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 var(--padding-medium);
+}
+
+/* Logo */
+.header-logo h1 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--cor-texto-terciario);
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Links da navbar */
+.navbar-links {
+    display: flex;
+    gap: var(--margin-medium);
+    list-style: none;
+    margin: 0;
+}
+
+.navbar-links li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: var(--cor-texto-terciario);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    padding: var(--padding-small);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo para os ícones da navbar */
+.navbar-links a svg {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Redes sociais na navbar */
+.navbar-social {
+    display: flex;
+    gap: var(--margin-medium);
+}
+
+.navbar-social a {
+    color: var(--cor-texto-terciario);
+    transition: color 0.3s ease;
+}
+
+.navbar-social a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo para os ícones sociais */
+.navbar-social a svg {
+    font-size: 24px;
+}
