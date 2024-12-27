@@ -23,6 +23,13 @@
 }
 
 /* Logo */
+.header-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .header-logo h1 {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
@@ -33,10 +40,10 @@
 
 /* Navbar */
 .navbar {
+    flex: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-grow: 1;
     gap: var(--margin-medium);
 }
 
@@ -70,7 +77,9 @@
 
 /* Redes sociais na navbar */
 .navbar-social {
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     gap: var(--margin-medium);
 }
 
@@ -90,14 +99,13 @@
     width: 70px;
     height: 35px;
     border-radius: 50px;
-    border: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
 
-/* Media queries para dispositivos móveis e tablets */
+/* Responsividade */
 @media (max-width: 1024px) {
     .header-container {
-        flex-wrap: wrap;
+        padding: 0 var(--padding-small);
     }
 
     .header-logo h1 {
@@ -107,35 +115,24 @@
     .navbar-links {
         gap: var(--margin-small);
     }
-
-    .theme-switch {
-        width: 60px;
-        height: 30px;
-    }
-
-    .theme-switch .slider:before {
-        width: 20px;
-        height: 20px;
-        transform: translateX(25px);
-    }
 }
 
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         align-items: center;
-        padding: 0 var(--padding-small);
+        text-align: center;
+        gap: var(--padding-small);
     }
 
-    .header-logo h1 {
-        font-size: var(--font-size-medium);
-        text-align: center;
+    .header-logo {
+        flex: none;
     }
 
     .navbar {
         flex-direction: column;
         align-items: center;
-        gap: var(--margin-small);
+        gap: var(--padding-small);
     }
 
     .navbar-links {
@@ -146,7 +143,10 @@
 
     .navbar-social {
         justify-content: center;
-        gap: var(--padding-small);
+    }
+
+    .theme-switch {
+        margin-top: var(--padding-small);
     }
 }
 
@@ -155,22 +155,16 @@
         padding: var(--padding-medium) 0;
     }
 
-    .header-container {
-        flex-direction: column;
-        padding: 0 var(--padding-small);
-    }
-
     .header-logo h1 {
         font-size: var(--font-size-small);
     }
 
-    .navbar {
-        flex-direction: column;
-        gap: var(--padding-small);
-    }
-
     .navbar-links a {
         font-size: var(--font-size-small);
+    }
+
+    .navbar-links {
+        gap: var(--padding-small);
     }
 
     .theme-switch {
