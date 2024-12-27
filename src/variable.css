@@ -3,6 +3,8 @@
 /* Definindo variáveis de cores para a PAGINA*/
 :root {
     --gradient-background: linear-gradient(to right, black, #3533cd);
+    --cor-fundo-claro: #f0f0f0;
+    --cor-fundo-escuro: #131313;
     --cor-primaria-roxo: #1032f1; 
     --cor-secundaria-preto: #0f0c0c; 
     --cor-terciaria-branco: #f7f7f7;

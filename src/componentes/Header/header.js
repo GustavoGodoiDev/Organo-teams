@@ -1,17 +1,21 @@
-import React from "react";
-import { FaHome, FaInfoCircle, FaLinkedin, FaInstagram } from "react-icons/fa"; // Importando os ícones
+import React, { useState } from "react";
+import { FaHome, FaInfoCircle, FaLinkedin, FaInstagram, FaSun, FaMoon } from "react-icons/fa"; 
 import "./header.css";
 
 const Header = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+        document.body.classList.toggle("dark-mode", !isDarkMode);
+    };
+
     return (
-        <header className="header">
+        <header className={`header ${isDarkMode ? "dark" : "light"}`}>
             <div className="header-container">
-                {/* Logo */}
                 <div className="header-logo">
                     <h1>DCBM Data Center</h1>
                 </div>
-
-                {/* Navbar */}
                 <nav className="navbar">
                     <ul className="navbar-links">
                         <li>
@@ -27,8 +31,6 @@ const Header = () => {
                             </a>
                         </li>
                     </ul>
-
-                    {/* Social Icons */}
                     <div className="navbar-social">
                         <a href="https://www.linkedin.com/company/dcbmdatacenter/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin size={24} />
@@ -36,6 +38,20 @@ const Header = () => {
                         <a href="https://instagram.com/dcbmdatacenter" target="_blank" rel="noopener noreferrer">
                             <FaInstagram size={24} />
                         </a>
+                    </div>
+
+                    {/* Botão de alternância de tema */}
+                    <div className="theme-switch">
+                        <input 
+                            type="checkbox" 
+                            id="themeToggle" 
+                            onChange={toggleTheme} 
+                            checked={isDarkMode} 
+                        />
+                        <label htmlFor="themeToggle" className="slider">
+                            <FaSun className="icon-sun" />
+                            <FaMoon className="icon-moon" />
+                        </label>
                     </div>
                 </nav>
             </div>
