@@ -4,7 +4,7 @@
 .header {
     background: var(--gradient-background);
     font-family: var(--font-family-principal);
-    padding: var(--padding-large) 0;
+    padding: var(--padding-medium) 0; /* Reduzido para tornar o cabeçalho mais compacto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,7 @@
     width: 100%;
     max-width: 1200px;
     padding: 0 var(--padding-medium);
+    gap: var(--padding-small);
 }
 
 /* Logo */
@@ -31,7 +32,7 @@
 }
 
 .header-logo h1 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
     color: var(--cor-texto-terciario);
     margin: 0;
@@ -44,13 +45,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--margin-medium);
+    gap: var(--margin-small);
 }
 
 /* Links da navbar */
 .navbar-links {
     display: flex;
-    gap: var(--margin-medium);
+    gap: var(--padding-medium); /* Melhor espaçamento para ícones */
     list-style: none;
     margin: 0;
 }
@@ -80,7 +81,7 @@
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: var(--margin-medium);
+    gap: var(--padding-medium); /* Ajustado para espaçamento entre ícones */
 }
 
 .navbar-social a {
@@ -95,21 +96,100 @@
 /* Estilo do botão de alternância do tema (switch) */
 .theme-switch {
     position: relative;
-    display: inline-block;
-    width: 70px;
-    height: 35px;
-    border-radius: 50px;
-    transition: border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Compacto */
+    height: 30px;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switch .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+.theme-switch .slider .sun,
+.theme-switch .slider .moon {
+    color: var(--cor-texto-terciario);
+}
+
+.theme-switch .slider:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+}
+
+.theme-switch input:checked + .slider:before {
+    transform: translateX(30px);
+    background-color: black;
+}
+
+.theme-switch input:checked + .slider .moon {
+    color: white;
+}
+
+.theme-switch input:not(:checked) + .slider .sun {
+    color: black;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #eaeaea;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .header {
+    background-color: #333;
+}
+
+body.dark-mode .navbar-links a {
+    color: #eaeaea;
+}
+
+body.dark-mode .navbar-social a {
+    color: #eaeaea;
+}
+
+body.dark-mode .navbar-links a:hover,
+body.dark-mode .navbar-social a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .header-logo h1 {
+    color: var(--cor-texto-terciario);
+}
+
+body.dark-mode .theme-switch {
+    background-color: var(--cor-primaria-escura);
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
     .header-container {
         padding: 0 var(--padding-small);
-    }
-
-    .header-logo h1 {
-        font-size: var(--font-size-medium);
     }
 
     .navbar-links {
@@ -135,31 +215,17 @@
         gap: var(--padding-small);
     }
 
-    .navbar-links {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--padding-small);
-    }
-
     .navbar-social {
         justify-content: center;
-    }
-
-    .theme-switch {
-        margin-top: var(--padding-small);
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: var(--padding-medium) 0;
+        padding: var(--padding-small) 0;
     }
 
     .header-logo h1 {
-        font-size: var(--font-size-small);
-    }
-
-    .navbar-links a {
         font-size: var(--font-size-small);
     }
 
@@ -173,8 +239,8 @@
     }
 
     .theme-switch .slider:before {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
         transform: translateX(20px);
     }
 }
