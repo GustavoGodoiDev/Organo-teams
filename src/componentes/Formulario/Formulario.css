@@ -5,11 +5,12 @@
     justify-content: center;
     margin: var(--margin-large) 0;
     font-weight: var(--font-weight-bold);
+    background: var(--gradient-background);
 }
 
 .formulario form {
     max-width: 60%;
-    background-color: var(--cor-fundo-rodape);
+    background-color: var(--cor-terciaria-branco);
     border-radius: 20px;
     padding: var(--padding-large) var(--padding-large);
     box-shadow: 8px 8px 16px var(--cor-borda);
