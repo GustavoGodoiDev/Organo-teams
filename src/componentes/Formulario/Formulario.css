@@ -149,7 +149,7 @@
 }
 
 .cropper-button.confirmar {
-    background-color: var(--cor-primaria);
+    background-color: #0084ff;
     color: var(--text-color-light);
     border: none;
     margin: var(--padding-small);
@@ -205,13 +205,13 @@ input[type="range"] {
 }
 
 .preview-imagem button {
+    background-color: #0037ff;
     display: block;
     margin-top: var(--padding-medium);
     padding: var(--padding-small) var(--padding-large);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
     border-radius: 10px;
-    background-color: var(--cor-primaria);
     color: var(--text-color-light);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -222,6 +222,6 @@ input[type="range"] {
 }
 
 .preview-imagem button:hover {
-    background-color: #3b5bd2;
+    background-color: #000000;
     transform: scale(1.05);
 }
