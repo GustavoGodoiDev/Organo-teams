@@ -7,7 +7,6 @@
     backdrop-filter: blur(10px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    color: var(--corSecundaria); 
 }
 
 .time h3 {
@@ -16,6 +15,12 @@
     display: inline-block;
     padding-bottom: var(--padding-small);
     font-weight: var(--font-weight-bold);
+    color: var(--cor-terciaria-branco);  /* Cor para o modo claro */
+}
+
+/* Modo escuro */
+body.dark-mode .time h3 {
+    color: var(--cor-secundaria-preto);  /* Cor para o modo escuro */
 }
 
 .time .colaboradores {
