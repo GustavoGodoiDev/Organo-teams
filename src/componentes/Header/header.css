@@ -92,10 +92,10 @@
 .theme-switch {
     position: relative;
     display: inline-block;
-    width: 70px;  /* Aumentado para melhorar a área de clique */
-    height: 35px; /* Mantido o mesmo tamanho */
+    width: 70px;  
+    height: 35px; 
     border-radius: 50px;
-    border: 2px solid transparent; /* Borda invisível por padrão */
+    border: 4px solid #eaeaea; 
     transition: border-color 0.3s ease;
 }
 

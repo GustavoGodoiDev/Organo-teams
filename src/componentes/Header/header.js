@@ -14,7 +14,7 @@ const Header = () => {
         <header className={`header ${isDarkMode ? "dark" : "light"}`}>
             <div className="header-container">
                 <div className="header-logo">
-                    <h1>DCBM Data Center</h1>
+                    <h1>DCBM Data Center | </h1>
                 </div>
                 <nav className="navbar">
                     <ul className="navbar-links">
